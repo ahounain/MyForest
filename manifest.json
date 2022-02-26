@@ -1,10 +1,24 @@
 {
-    "name": "MyForest",
-    "manifest_version": 3,
-    "content_scripts": [
-        {
-            "matches": ["https://opensea.io/assets/*"],
-            "js": ["purchase_detection.js"]
+  "name": "MyForest",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "background": {
+    "page": "background.html",  
+    "service_worker": "background.js",
+    "persistant": false
+  },
+  "permissions": [    
+    "activeTab",
+    "<all_urls>",
+    "tabs"
+  ],
+  "content_scripts": [
+      {
+          "matches": ["*://opensea.io/*"],
+          "js": ["app.js"],
+          "run_at": "document_end"
         }
-    ]
+  ],
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+
 }

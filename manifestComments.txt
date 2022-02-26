@@ -1,0 +1,11 @@
+PERMISSIONS:
+ // access tab user is on
+ activeTab    
+ // lets it run on all URLS
+ <all_urls>
+ // lets it access all tabs
+ <tabs>
+ 
+ On line 15, the content_scripts we can change the matches to urls we want - never mind just did this
+
+ The Skillshare video mentions using firebase - I'm still not quite sure what we might use it for but I have included the setup for it nonetheless (line 22 in the json )
