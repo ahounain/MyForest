@@ -9,3 +9,4 @@ PERMISSIONS:
  On line 15, the content_scripts we can change the matches to urls we want - never mind just did this
 
  The Skillshare video mentions using firebase - I'm still not quite sure what we might use it for but I have included the setup for it nonetheless (line 22 in the json )
+ "content_security_policy": "script-src 'self' https://www.gstatic.com/https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
