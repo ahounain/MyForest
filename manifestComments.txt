@@ -1,0 +1,7 @@
+PERMISSIONS:
+ // access tab user is on
+ activeTab    
+ // lets it run on all URLS
+ <all_urls>
+ // lets it access all tabs
+ <tabs>
