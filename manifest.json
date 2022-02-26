@@ -3,7 +3,7 @@
   "manifest_version": 3,
   "version": "1.0.0",
   "background": {
-    "page": "background.html",  
+    
     "service_worker": "background.js",
     "persistant": false
   },
