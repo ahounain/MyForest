@@ -14,7 +14,7 @@
   ],
   "content_scripts": [
       {
-          "matches": ["*://opensea.io/*"],
+          "matches": ["*://opensea.io/assets*"],
           "js": ["app.js"],
           "run_at": "document_end"
         }
