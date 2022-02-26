@@ -8,7 +8,6 @@
   },
   "permissions": [    
     "activeTab",
-    "<all_urls>",
     "tabs"
   ],
   "content_scripts": [
@@ -23,6 +22,6 @@
         "js": ["purchase_detection.js"]
     }
 
-  ],
-  "content_security_policy": "script-src 'self' https://www.gstatic.com/https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+  ]
+  
 }
