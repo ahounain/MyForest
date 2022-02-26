@@ -3,7 +3,6 @@
   "manifest_version": 3,
   "version": "1.0.0",
   "background": {
-    
     "service_worker": "background.js",
     "persistant": false
   },
@@ -13,12 +12,17 @@
     "tabs"
   ],
   "content_scripts": [
-      {
+    {
           "matches": ["*://opensea.io/assets*"],
           "js": ["app.js"],
           "run_at": "document_end"
-        }
+    },
+    
+    {
+        "matches": ["*://opensea.io/assets/*"],
+        "js": ["purchase_detection.js"]
+    }
+
   ],
   "content_security_policy": "script-src 'self' https://www.gstatic.com/https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
-
 }
