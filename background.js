@@ -20,6 +20,7 @@ chrome.tabs.onUpdated.addListener((tabID, changeInfo, tab) => {
     console.log("1")
     if (currentURL !== changeInfo.url) {
         chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+            console.log(tabs)
             chrome.tabs.sendMessage(tabs[0].id, {changedURL: "changed"}, async (response) => {
                 console.log("5")
                 console.log(response)
